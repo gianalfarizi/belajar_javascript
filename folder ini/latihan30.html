@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-compatible" content="ie=edge">
+    <title>Belajar Object javascript</title>
+
+    <script>
+        function person(firsName, lastName){
+            //propeti
+            this.firsName = firsName;
+            this.lastName = lastName;
+            
+            // metho
+            this.fullName = function(){
+                return `${this.firsName} ${this.lastName}`
+            }
+            this.showName = function(){
+                document.write(this.fullName());
+            }
+        }
+
+        var person1 = new person("Muhar", "Dian");
+        var person2 = new person("petani", "kode");
+
+        person1.showName();
+        document.write("<br>");
+        person2.showName();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
